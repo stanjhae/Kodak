@@ -1,0 +1,13 @@
+.mobileContainer {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.mobileContainer h4 {
+    margin-bottom: 70px;
+}

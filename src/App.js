@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
-import { FlexboxGrid } from 'rsuite';
 import { store, history } from './redux/store';
 import Home from './components/Home/Home';
 import Login from './components/Admin/Login';
-import 'rsuite/dist/styles/rsuite-default.css';
-import Navbar from './components/Navbar';
-import Create from './components/Admin/Create';
+import Navbar from './components/navBar/Navbar';
+import CreateImage from './pages/upload/uploadImage.page';
+import Mobile from './components/mobile/mobile';
+import AboutPage from './pages/about/aboutPage';
 
 const { dispatch } = store;
 
@@ -26,18 +26,18 @@ const App = () => {
   return (
     <Provider store={store}>
       <ConnectedRouter history={history}>
-        <FlexboxGrid>
-          <FlexboxGrid.Item colspan={4}>
-            <Navbar />
-          </FlexboxGrid.Item>
-          <FlexboxGrid.Item colspan={20}>
+        <Mobile />
+        <div className="mainContainer">
+          <Navbar />
+          <div id="mainAppContainer" className="mainAppContainer">
             <Switch>
               <Route path="/login" component={Login} />
-              <Route path="/create" component={Create} />
+              <Route path="/upload" component={CreateImage} />
+              <Route path="/about" component={AboutPage} />
               <Route component={Home} />
             </Switch>
-          </FlexboxGrid.Item>
-        </FlexboxGrid>
+          </div>
+        </div>
       </ConnectedRouter>
     </Provider>
   );

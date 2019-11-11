@@ -1,0 +1,18 @@
+.sideBarContainer {
+    background-color: white;
+    box-shadow: 3px 0 24px -1px rgba(238,238,238,1);
+    height: 100vh;
+    position: fixed;
+    width: 270px;
+    min-width: 260px;
+    flex-direction: column;
+    display: flex;
+}
+
+.dropDownItem {
+    padding-left: 15px;
+}
+
+.dropDownItem:hover {
+
+}

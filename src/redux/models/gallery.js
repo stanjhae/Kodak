@@ -28,7 +28,7 @@ export const gallery = {
       };
     },
   },
-  effects: (dispatch) => ({
+  effects: dispatch => ({
     createImage: (payload, state) => {
       const data = {
         ...payload,

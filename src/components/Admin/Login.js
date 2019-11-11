@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import {
-  Form, FormGroup, ControlLabel, FormControl, ButtonToolbar, Button,
-} from 'rsuite';
+import { Form, FormGroup, ControlLabel, FormControl, ButtonToolbar, Button } from 'rsuite';
 import { store } from '../../redux/store';
+import './login.styles.css';
 
 const { dispatch } = store;
 
@@ -16,7 +15,7 @@ const Login = () => {
   };
 
   return (
-    <>
+    <div className="loginContainer center">
       <Form>
         <FormGroup>
           <ControlLabel>Username</ControlLabel>
@@ -28,15 +27,17 @@ const Login = () => {
         </FormGroup>
         <FormGroup>
           <ButtonToolbar>
-            <Button appearance="primary" onClick={handleSubmit}>Submit</Button>
+            <Button color="violet" size="lg" onClick={handleSubmit}>
+              Submit
+            </Button>
           </ButtonToolbar>
         </FormGroup>
       </Form>
-    </>
+    </div>
   );
 };
 
-const mapState = (state) => ({
+const mapState = state => ({
   images: state.gallery.images,
 });
 

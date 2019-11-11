@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.interceptors.response.use(null, (error) => {
+axios.interceptors.response.use(null, error => {
   let err = {};
   if (error.status === 408 || error.code === 'ECONNABORTED') {
     err = { success: false, message: 'Oops. Server down' };
@@ -18,7 +18,7 @@ axios.interceptors.response.use(null, (error) => {
   return Promise.reject(err);
 });
 
-axios.interceptors.request.use(async (config) => {
+axios.interceptors.request.use(async config => {
   const user = JSON.parse(await localStorage.getItem('user'));
   if (user && user.token) {
     config.headers['x-auth-token'] = user.token;

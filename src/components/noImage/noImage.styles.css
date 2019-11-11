@@ -1,0 +1,15 @@
+.noImageContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#noImage {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+.noImageContainer h4 {
+    margin-bottom: 30px;
+}

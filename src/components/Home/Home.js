@@ -1,8 +1,6 @@
 import React from 'react';
-import Gallery from './gallery';
+import Gallery from './gallery/gallery';
 
-const Home = () => (
-  <Gallery />
-);
+const Home = () => <Gallery />;
 
 export default Home;

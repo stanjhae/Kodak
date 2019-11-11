@@ -8,6 +8,7 @@
     "connected-react-router": "^6.5.2",
     "formik": "^1.5.8",
     "history": "^4.10.1",
+    "lottie-web": "^5.5.9",
     "magic-grid": "^3.2.4",
     "magic-grid-react": "^0.3.1",
     "react": "^16.10.1",
@@ -16,7 +17,7 @@
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
-    "rsuite": "^4.0.2"
+    "rsuite": "^4.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,8 +42,11 @@
     ]
   },
   "devDependencies": {
+    "prettier": "^1.19.1",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",

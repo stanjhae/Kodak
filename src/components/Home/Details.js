@@ -1,27 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Formik } from 'formik';
-import {
-  FlexboxGrid, Button, SelectPicker, Input, Slider,
-} from 'rsuite';
+import { FlexboxGrid, Button, SelectPicker, Input, Slider } from 'rsuite';
 import { store } from '../../redux/store';
 import { types } from './types';
 
 const { dispatch } = store;
 
-const pickerValues = types.map((type) => ({ label: type, value: type })); // convert types to label and value pair
+const pickerValues = types.map(type => ({ label: type, value: type })); // convert types to label and value pair
 
 const Details = ({ details }) => {
-  const getActivity = (values) => {
+  const getActivity = values => {
     dispatch.bored.getActivity(values);
   };
 
   return (
     <FlexboxGrid.Item colspan={6}>
-      <Formik
-        initialValues={details}
-        onSubmit={getActivity}
-      >
+      <Formik initialValues={details} onSubmit={getActivity}>
         {({ handleSubmit, handleChange, values }) => (
           <>
             <h3>Activity details: </h3>
@@ -44,7 +39,7 @@ const Details = ({ details }) => {
   );
 };
 
-const mapState = (state) => ({
+const mapState = state => ({
   details: state.bored.details,
 });
 

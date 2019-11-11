@@ -1,0 +1,13 @@
+.navBarItemContainer {
+    width: 100%;
+    flex-direction: column;
+    padding: 15px;
+    display: flex;
+    flex: 1;
+}
+
+.linkContainer {
+    padding: 15px;
+    display: flex;
+    flex: 1;
+}

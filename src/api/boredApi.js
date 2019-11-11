@@ -4,7 +4,7 @@ class boredApi {
   static getActivity(details) {
     let query = '';
     if (details) {
-      Object.keys(details).map((detail) => {
+      Object.keys(details).map(detail => {
         console.log(detail);
         query += `${detail}=${details[detail]}&`;
         // query += query+detail;
@@ -17,7 +17,7 @@ class boredApi {
       timeout: 5 * 1000,
     })
       .then(({ data }) => data)
-      .catch((error) => error);
+      .catch(error => error);
   }
 }
 

@@ -1,0 +1,8 @@
+.navBarItemsContainer {
+    flex-direction: column;
+}
+
+.dropdownContainer {
+    display: none;
+    flex-direction: column;
+}

@@ -1,0 +1,33 @@
+.aboutPageContainer {
+    display: flex;
+    flex: 1;
+    /*background-color: pink;*/
+    flex-direction: column;
+}
+.headerContainer {
+    padding: 30px 0;
+    /*background-color: orange;*/
+}
+
+.contentContainer {
+    padding: 40px 100px;
+    align-items: center;
+    /*text-align: justify;*/
+    /*background-color: orange;*/
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    /*background-color: red;*/
+}
+
+.footerContainer {
+    /*background-color: green;*/
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.iconContainer {
+    padding: 20px;
+    margin: 5px;
+    /*background-color: red;*/
+}

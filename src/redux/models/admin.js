@@ -1,4 +1,5 @@
 import { push } from 'connected-react-router';
+import { Alert } from 'rsuite';
 
 const adminState = {
   credentials: {
@@ -15,14 +16,14 @@ export const admin = {
       credentials: payload,
     }),
   },
-  effects: (dispatch) => ({
-    login: (payload) => {
+  effects: dispatch => ({
+    login: payload => {
       if (payload.userName === 'faisal' && payload.password === 'Thesis_2019') {
         localStorage.setItem('admin', JSON.stringify(payload));
         dispatch.admin.loginSuccess(payload);
         dispatch(push('/'));
       } else {
-        alert('Wrong details');
+        Alert.error('Incorrect username or password');
       }
     },
     logout: () => {
