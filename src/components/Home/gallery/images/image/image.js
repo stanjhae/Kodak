@@ -19,7 +19,7 @@ const Image = ({ onClick, url, type, index }) => {
 
   const handleLike = event => {
     event.stopPropagation();
-    setIsLiked(true);
+    setIsLiked(liked !== true);
   };
 
   return (

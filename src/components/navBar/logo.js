@@ -17,7 +17,7 @@ const Logo = () => {
       renderer: 'svg',
       loop: false,
       autoplay: true,
-      path: 'https://assets2.lottiefiles.com/datafiles/nPMUxybkfdHjXBx/data.json',
+      path: 'https://assets8.lottiefiles.com/datafiles/nPMUxybkfdHjXBx/data.json',
     });
   }, []);
 

@@ -29,7 +29,7 @@ const App = () => {
         <Mobile />
         <div className="mainContainer">
           <Navbar />
-          <div id="mainAppContainer" className="mainAppContainer">
+          <div className="mainAppContainer">
             <Switch>
               <Route path="/login" component={Login} />
               <Route path="/upload" component={CreateImage} />
