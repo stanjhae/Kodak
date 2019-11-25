@@ -16,7 +16,8 @@ const Mobile = () => {
     <div className="mobileContainer">
       <h4>
         {/* eslint-disable-next-line react/no-unescaped-entities */}
-        Hmmm... <br /><br/> You'd need a bigger screen to view this website
+        Hmmm... <br />
+        <br /> You&apos;d need a bigger screen to view this website
       </h4>
       <div className="logoContainer" id="laptop" />
     </div>

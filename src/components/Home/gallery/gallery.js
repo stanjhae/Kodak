@@ -8,9 +8,15 @@ import NoImage from '../../noImage/noImage';
 const Gallery = ({ images }) => {
   const [photo, setPhoto] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = (index) => {
+    setPhoto(index);
+    setIsOpen(true);
+  }
+
   return (
     <>
-      {images.length ? <Images images={images} onClick={() => setIsOpen(true)} /> : <NoImage />}
+      {images.length ? <Images images={images} onClick={handleOpen} /> : <NoImage />}
       {isOpen && (
         <Lightbox
           mainSrc={images[photo].url}

@@ -1,4 +1,6 @@
 import { push } from 'connected-react-router';
+import { Alert } from 'rsuite';
+import galleryApi from '../../api/galleryApi';
 
 const galleryState = {
   images: [],
@@ -20,7 +22,7 @@ export const gallery = {
     }),
     filterImages: (state, payload) => {
       let filtered = [...state.images];
-      filtered = filtered.filter(({ category }) => category === payload);
+      filtered = filtered.filter(({ category }) => category.toLowerCase() === payload);
       return {
         ...state,
         filtered,
@@ -29,23 +31,38 @@ export const gallery = {
     },
   },
   effects: dispatch => ({
-    createImage: (payload, state) => {
-      const data = {
-        ...payload,
-        url: payload.url.substring(0, 4) === 'http' ? payload.url : `images/${payload.url}`,
-      };
-      const gallery = [...state.gallery.images, data];
-      localStorage.setItem('images', JSON.stringify(gallery));
-      dispatch.gallery.createSuccess(gallery);
-      dispatch.gallery.filterImages('');
-      dispatch(push('/'));
+    createImage: async (payload, state) => {
+      const response = await galleryApi.createImage(payload);
+      if (!response.success) {
+        return Alert.error('Something went wrong', 5000);
+      }
+      const images = [response.result, ...state.gallery.images];
+      dispatch.gallery.createSuccess(images);
+      return dispatch(push('/'));
     },
-    deleteImage: (payload, state) => {
-      const gallery = [...state.gallery.images];
-      gallery.splice(payload, 1);
-      localStorage.setItem('images', JSON.stringify(gallery));
-      dispatch.gallery.createSuccess(gallery);
-      dispatch.gallery.filterImages('');
+    getImages: async () => {
+      const response = await galleryApi.getImages();
+      dispatch.gallery.createSuccess(response.result);
+      const filter = window.location.pathname.slice(1);
+      dispatch.gallery.filterImages(filter);
+    },
+    likeImage: async (payload, state) => {
+      const images = [...state.gallery.images];
+      const response = await galleryApi.likeImage(payload.image);
+      if (!response.success) {
+        return Alert.error('Something went wrong', 5000);
+      }
+      images.splice(payload.index, 1, response.result);
+      return dispatch.gallery.createSuccess(images);
+    },
+    deleteImage: async (payload, state) => {
+      const images = [...state.gallery.images];
+      const response = await galleryApi.deleteImage(payload.image);
+      if (!response.success) {
+        return Alert.error('Something went wrong', 5000);
+      }
+      images.splice(payload.index, 1);
+      return dispatch.gallery.createSuccess(images);
     },
   }),
 };

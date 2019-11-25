@@ -1,12 +1,16 @@
 .aboutPageContainer {
     display: flex;
     flex: 1;
-    /*background-color: pink;*/
     flex-direction: column;
 }
 .headerContainer {
     padding: 30px 0;
-    /*background-color: orange;*/
+    height: 30%;
+    background-image: url("https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2018/04/2018-pulitzer-prize-photography-winners-announced.jpg");
+    background-size: contain;
+}
+.headerContainer h1{
+    color: white;
 }
 
 .contentContainer {

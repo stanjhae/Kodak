@@ -19,12 +19,12 @@ const Navbar = ({ admin, categories }) => {
 
   const filterImages = filter => {
     navigate(`/${filter.toLowerCase()}`);
-    dispatch.gallery.filterImages(filter);
-};
+    dispatch.gallery.filterImages(filter.toLowerCase());
+  };
 
   return (
     <div id="sideNav" className="sideBarContainer">
-      <Sidenav appearance="subtle" style={{ height: '100vh' }} activeKey="1">
+      <Sidenav appearance="inverse" style={{ height: '100vh' }} activeKey="1">
         <Sidenav.Body>
           <Nav>
             <Logo />
@@ -36,24 +36,19 @@ const Navbar = ({ admin, categories }) => {
             >
               Home
             </Nav.Item>
+            <Nav.Item onClick={() => navigate('/about')}>About</Nav.Item>
             <Dropdown eventKey="3" title="Categories">
-              <Dropdown.Item className="dropDownItem" onClick={() => filterImages('')}>All</Dropdown.Item>
-              {categories.map(({ label, value }, index) => (
-                <Dropdown.Item className="dropDownItem" key={index} onClick={() => filterImages(value)}>
+              <Dropdown.Item className="dropDownItem" onClick={() => filterImages('')}>
+                All
+              </Dropdown.Item>
+              {categories.map(({ label, value }) => (
+                <Dropdown.Item className="dropDownItem" key={`${label}-${value}`} onClick={() => filterImages(value)}>
                   {label}
                 </Dropdown.Item>
               ))}
             </Dropdown>
             {!admin && <Nav.Item onClick={() => navigate('/login')}>Login</Nav.Item>}
             {admin && <Nav.Item onClick={() => navigate('/upload')}>Upload</Nav.Item>}
-            {admin && (
-              <Nav.Item onClick={() => navigate('/about')}>
-                {`About ${admin
-                  .charAt(0)
-                  .toUpperCase()
-                  .concat(admin.slice(1))}`}
-              </Nav.Item>
-            )}
             {admin && <Nav.Item onClick={handleLogout}>Logout</Nav.Item>}
           </Nav>
         </Sidenav.Body>

@@ -1,3 +1,12 @@
 .loginContainer {
+    background-image: url("http://kaprandesign.com/wp-content/uploads/2017/02/02.jpg");
+    background-size: cover;
     flex: 1;
+}
+.formContainer{
+    background-color: rgb(0,0,0,0.5);
+    padding: 50px;
+}
+.label{
+    color:white
 }

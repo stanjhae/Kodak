@@ -1,4 +1,13 @@
 .uploadImageContainer {
+    background-image: url("https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2018/10/panasoninc-gm1-canon-6d-lede-image.jpg");
+    background-size: cover;
     display: flex;
     flex: 1;
+}
+.formContainer{
+    background-color: rgb(0,0,0,0.5);
+    padding: 50px;
+}
+.categoryLabel{
+    color:'white';
 }

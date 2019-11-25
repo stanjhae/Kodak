@@ -10,25 +10,24 @@ import ImageActionButton from '../../../../imageActionButton/image.actionButton'
 
 const { dispatch } = store;
 
-const Image = ({ onClick, url, type, index }) => {
-  const [liked, setIsLiked] = React.useState(false);
+const Image = ({ onClick, image, index, admin }) => {
   const deleteImage = event => {
     event.stopPropagation();
-    dispatch.gallery.deleteImage(index);
+    dispatch.gallery.deleteImage({ image: image.id, index });
   };
 
   const handleLike = event => {
     event.stopPropagation();
-    setIsLiked(liked !== true);
+    dispatch.gallery.likeImage({ image: image.id, index });
   };
 
   return (
     <div style={{ position: 'absolute' }} onClick={onClick} className="galleryImageContainer pointer center">
-      <img width={230} className="galleryImage" src={url} alt={type} />
+      <img width={230} className="galleryImage" src={image.url} alt={image.type} />
       <div className="middle center" />
       <div className="buttonsContainer center">
-        <ImageActionButton onClick={handleLike} icon={liked ? likedIcon : like} />
-        <ImageActionButton onClick={deleteImage} icon={deleteIcon} />
+        <ImageActionButton onClick={handleLike} icon={image.liked ? likedIcon : like} />
+        {admin && <ImageActionButton onClick={deleteImage} icon={deleteIcon} />}
       </div>
     </div>
   );

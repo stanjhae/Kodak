@@ -16,9 +16,8 @@ const App = () => {
   useEffect(() => {
     const init = async () => {
       const admin = await localStorage.getItem('admin');
-      const images = await localStorage.getItem('images');
+      dispatch.gallery.getImages();
       if (admin) dispatch.admin.loginSuccess(JSON.parse(admin));
-      if (images) dispatch.gallery.createSuccess(JSON.parse(images));
     };
     init().then();
   }, []);

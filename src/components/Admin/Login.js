@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { Form, FormGroup, ControlLabel, FormControl, ButtonToolbar, Button } from 'rsuite';
+import { Form, FormGroup, FormControl, ButtonToolbar, Button } from 'rsuite';
 import { store } from '../../redux/store';
 import './login.styles.css';
 
@@ -16,13 +16,13 @@ const Login = () => {
 
   return (
     <div className="loginContainer center">
-      <Form>
+      <Form className="formContainer">
         <FormGroup>
-          <ControlLabel>Username</ControlLabel>
+          <h3 className="label">Username</h3>
           <FormControl name="name" value={userName} onChange={setUsername} />
         </FormGroup>
         <FormGroup>
-          <ControlLabel>Password</ControlLabel>
+          <h3 className="label">Password</h3>
           <FormControl name="password" type="password" value={password} onChange={setPassword} />
         </FormGroup>
         <FormGroup>

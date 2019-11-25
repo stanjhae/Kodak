@@ -7,8 +7,8 @@ const Images = ({ images, onClick }) => {
   return (
     <div className="galleryContainer">
       <MagicGrid animate useMin gutter={10} maxColumns={6}>
-        {images.map(({ url, type }, index) => {
-          return <Image index={index} onClick={onClick} type={type} url={url} key={index.toString()} />;
+        {images.map((image, index) => {
+          return <Image index={index} onClick={ () => onClick(index)} image={image} key={image.id} />;
         })}
       </MagicGrid>
     </div>

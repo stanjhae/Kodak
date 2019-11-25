@@ -22,6 +22,7 @@ export const admin = {
         localStorage.setItem('admin', JSON.stringify(payload));
         dispatch.admin.loginSuccess(payload);
         dispatch(push('/'));
+        dispatch.gallery.getImages();
       } else {
         Alert.error('Incorrect username or password');
       }

@@ -3370,7 +3370,7 @@ dom-converter@^0.2:
   dependencies:
     "@babel/runtime" "^7.1.2"
 
-dom-lib@^1.1.0, dom-lib@^1.2.1:
+dom-lib@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/dom-lib/-/dom-lib-1.2.1.tgz#3d78c547f9b7499ce34d16657787a54c74cf4e30"
   integrity sha512-sx7X6iK0jidoY0xR/a/a3zOW6aLRuikb8E+3H5l5j4cgYmxXRvH1VcLf7w+FK77F8EAOt7td6ILmh1pyE/xDJA==
@@ -3654,6 +3654,13 @@ eslint-config-airbnb@^18.0.1:
     object.assign "^4.1.0"
     object.entries "^1.1.0"
 
+eslint-config-prettier@^6.5.0:
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.7.0.tgz#9a876952e12df2b284adbd3440994bf1f39dfbb9"
+  integrity sha512-FamQVKM3jjUVwhG4hEMnbtsq7xOIDm+SY5iBPfR8gKsJoAB2IQnNF+bk1+8Fy44Nq7PPJaLvkRxILYdJWoguKQ==
+  dependencies:
+    get-stdin "^6.0.0"
+
 eslint-config-react-app@^5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/eslint-config-react-app/-/eslint-config-react-app-5.0.2.tgz#df40d73a1402986030680c040bbee520db5a32a4"
@@ -3726,6 +3733,13 @@ eslint-plugin-jsx-a11y@6.2.3, eslint-plugin-jsx-a11y@^6.2.3:
     emoji-regex "^7.0.2"
     has "^1.0.3"
     jsx-ast-utils "^2.2.1"
+
+eslint-plugin-prettier@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.1.1.tgz#507b8562410d02a03f0ddc949c616f877852f2ba"
+  integrity sha512-A+TZuHZ0KU0cnn56/9mfR7/KjUJ9QNVXUhwvRFSR7PGPe0zQR6PTkmyqg1AtUUEOzTqeRsUwyKFh0oVZKVCrtA==
+  dependencies:
+    prettier-linter-helpers "^1.0.0"
 
 eslint-plugin-react-hooks@^1.6.1, eslint-plugin-react-hooks@^1.7.0:
   version "1.7.0"
@@ -4112,6 +4126,11 @@ fast-deep-equal@^2.0.1:
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz#7b05218ddf9667bf7f370bf7fdb2cb15fdd0aa49"
   integrity sha1-ewUhjd+WZ79/Nwv3/bLLFf3Qqkk=
 
+fast-diff@^1.1.2:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/fast-diff/-/fast-diff-1.2.0.tgz#73ee11982d86caaf7959828d519cfe927fac5f03"
+  integrity sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==
+
 fast-glob@^2.0.2:
   version "2.2.7"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-2.2.7.tgz#6953857c3afa475fff92ee6015d52da70a4cd39d"
@@ -4496,6 +4515,11 @@ get-own-enumerable-property-symbols@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/get-own-enumerable-property-symbols/-/get-own-enumerable-property-symbols-3.0.0.tgz#b877b49a5c16aefac3655f2ed2ea5b684df8d203"
   integrity sha512-CIJYJC4GGF06TakLg8z4GQKvDsx9EMspVxOYih7LerEL/WosUnFIww45CGfxfeKHqlg3twgUrYRT1O3WQqjGCg==
+
+get-stdin@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-6.0.0.tgz#9e09bf712b360ab9225e812048f71fde9c89657b"
+  integrity sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==
 
 get-stream@^4.0.0:
   version "4.1.0"
@@ -6289,6 +6313,11 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.2.0, loose-envify@^1.3
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
+
+lottie-web@^5.5.9:
+  version "5.5.10"
+  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.5.10.tgz#7ca10af84a139cb1db772f686cc33ac101ece46d"
+  integrity sha512-8U/WSNKx4y3JdGq1lZh8Phuz/pQsiM6BGQ/rNFjLPGJSaKQ92VTVN7NAOHUsvV0bywsC+ShBWSVUhbuP3NV2tg==
 
 lower-case@^1.1.1:
   version "1.1.4"
@@ -8110,6 +8139,18 @@ prepend-http@^1.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
+prettier-linter-helpers@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/prettier-linter-helpers/-/prettier-linter-helpers-1.0.0.tgz#d23d41fe1375646de2d0104d3454a3008802cf7b"
+  integrity sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==
+  dependencies:
+    fast-diff "^1.1.2"
+
+prettier@^1.19.1:
+  version "1.19.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
+  integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
+
 pretty-bytes@^5.1.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-5.3.0.tgz#f2849e27db79fb4d6cfe24764fc4134f165989f2"
@@ -8963,10 +9004,10 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-rsuite-table@^3.5.8:
-  version "3.5.8"
-  resolved "https://registry.yarnpkg.com/rsuite-table/-/rsuite-table-3.5.8.tgz#c0aca932e0e708db82ee05872a3531720c9b6068"
-  integrity sha512-pKi4TfBROCgQSXbW972tT0nkynjuLoWzL+vJRSuSZBDEQpffjPZu26WyBKHbYtAXSu9R1eSrgewC0VylgyvBnA==
+rsuite-table@^3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/rsuite-table/-/rsuite-table-3.7.1.tgz#f55a628e72d7dd7cb24b4728f3b89a3b221395a2"
+  integrity sha512-kDSDueMTO14FUR62rug9tRxYDw3JY2cHyB1iDaAcqM8KmEnTFpIxmo7difU0iuiRyTGdXYFF2S4v9HyM7lOAeA==
   dependencies:
     classnames "^2.2.5"
     dom-lib "^1.2.1"
@@ -8974,20 +9015,19 @@ rsuite-table@^3.5.8:
     lodash "^4.17.5"
     react-lifecycles-compat "^3.0.4"
 
-rsuite-utils@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/rsuite-utils/-/rsuite-utils-2.0.1.tgz#e6580390c8b3bc4eabd477dc98f1826895ab54fe"
-  integrity sha512-6HaiyFYfo03qdSwIMfCAwJf1l+XS+wWLyaygOxUlSU/5tHM6F1CGRkFPVtKVwKpCVqKUV+BRWO45vkpve2ercA==
+rsuite-utils@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/rsuite-utils/-/rsuite-utils-2.2.1.tgz#dbedd36f1e404b1a5befecd41d7aaea5b55c90f5"
+  integrity sha512-viDaUWDb6UtrV2YcncrJmJqinf4VmhMr73rU7xfympIBMZ3frfbnWbhxro8zrlLocMDKWbu0MgYF5SGBBIwsYA==
   dependencies:
     classnames "^2.2.5"
-    dom-lib "^1.1.0"
     lodash "^4.17.5"
     react-lifecycles-compat "^3.0.4"
 
-rsuite@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/rsuite/-/rsuite-4.0.2.tgz#7c773c33ee75c03379e4b46b098a251dba49f4b3"
-  integrity sha512-XMXkg8jwiRa8AfUmmw0Ip9PvQxNhmqvA8ivnr/Y07jDOITnISHp6XIYnL+sDecBz7GNmXamJXpI+vhR/qEAV7w==
+rsuite@^4.1.0:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/rsuite/-/rsuite-4.1.1.tgz#a53d96a1ea9c1c3b141173d8392b90f721635d80"
+  integrity sha512-jAWJ6yYtgoBzvJa8tL9GRSzwCMNNkCubcQj0r6moCtaB1H9OYseB6yRrVulQKsbzookW/2mL6gSoiIk9yK+Lug==
   dependencies:
     "@babel/runtime" "^7.0.0"
     classnames ">=2.0.0"
@@ -8999,9 +9039,9 @@ rsuite@^4.0.2:
     react-lifecycles-compat "^3.0.4"
     react-virtualized "^9.21.0"
     recompose "^0.26.0"
-    rsuite-table "^3.5.8"
-    rsuite-utils "^2.0.1"
-    schema-typed "^1.3.0"
+    rsuite-table "^3.7.1"
+    rsuite-utils "^2.2.1"
+    schema-typed "^1.3.1"
 
 rsvp@^4.8.4:
   version "4.8.5"
@@ -9097,10 +9137,10 @@ scheduler@^0.16.1:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
 
-schema-typed@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/schema-typed/-/schema-typed-1.3.0.tgz#b83f473137e3e8451a9a4e4f223e177255f51486"
-  integrity sha512-bBHqFcj8byKg8bn5UKuGKU6nY6rN1901CXPYBXXcwIGgJIaAeypqQg22q9gCqoKMDH7TadFsV0qu6OMjktDOtw==
+schema-typed@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/schema-typed/-/schema-typed-1.3.1.tgz#ca9e6a8d93c64c9fe6dc9986d60139c0513a23d1"
+  integrity sha512-gqYJNjppMNx1Xvre+G1hiXZR4oymGXgqxp0vb+uPrmxfaCa371guqKarL7PD1eN4Dflu7qhr2rJetLA7wW6NVQ==
 
 schema-utils@^1.0.0:
   version "1.0.0"
